@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organizador de tarefas</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <ion-icon name="bug-outline" class="logo"></ion-icon>
+
+        <ul>
+          <li>
+            <a href="#" class="active"
+              ><ion-icon name="clipboard-outline"></ion-icon>Painel</a
+            >
+          </li>
+          <li>
+            <a href="#"><ion-icon name="people-outline"></ion-icon>Equipes</a>
+          </li>
+          <li>
+            <a href="#"
+              ><ion-icon name="analytics-outline"></ion-icon>Relatórios</a
+            >
+          </li>
+          <li>
+            <a href="#"><ion-icon name="cog-outline"></ion-icon>Ajustes</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <div class="inner">
+          <section class="title-user">
+            <h1 class="title">
+              Meu painel <ion-icon name="pencil-outline"></ion-icon>
+            </h1>
+            <img src="https://github.com/marcoss741-0.png" alt="avatar" />
+          </section>
+
+          <section class="filter">
+            <button>
+              <ion-icon name="filter-outline"></ion-icon>
+              <span>Filtrar</span>
+            </button>
+            <div class="input-wrapper">
+              <ion-icon name="search-outline"></ion-icon>
+              <input type="text" placeholder="Filtrar tarefas..." />
+            </div>
+          </section>
+
+          <section class="tasks">
+            <div class="to-do">
+              <h2 class="title">Á fazer...</h2>
+              <div class="cards">
+                <div class="card">
+                  <h3>#Bora fazer uns desafios 👨🏻‍💻</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam, quos.
+                  </p>
+                  <div class="tags">
+                    <span>Marck Codes</span>
+                    <span>desafio</span>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <h3>#Bora fazer uns desafios</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam, quos.
+                  </p>
+                  <div class="tags">
+                    <span>Marck Codes</span>
+                    <span>desafio</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="in-progress">
+              <h2 class="title">Fazendo...</h2>
+              <div class="cards">
+                <div class="card">
+                  <h3>#Bora fazer uns desafios</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam, quos.
+                  </p>
+                  <div class="tags">
+                    <span>Marck Codes</span>
+                    <span>desafio</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="done">
+              <h2 class="title">Feito</h2>
+              <div class="cards">
+                <div class="card">
+                  <h3>#Bora fazer uns desafios</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam, quos.
+                  </p>
+                  <div class="tags">
+                    <span>Marck Codes</span>
+                    <span>desafio</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="src/js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
