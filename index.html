@@ -54,11 +54,28 @@
           <section class="tasks">
             <div class="to-do">
               <h2 class="title">
-                A fazer <ion-icon name="add-circle-outline"></ion-icon>
+                A fazer
+                <ion-icon
+                  class="add-button"
+                  id="doing"
+                  name="add-circle-outline"
+                ></ion-icon>
               </h2>
               <div class="cards">
                 <div class="card" draggable="true">
                   <h3>#Bora fazer uns desafios 👨🏻‍💻</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam, quos.
+                  </p>
+                  <div class="tags">
+                    <span>Marck Codes</span>
+                    <span>desafio</span>
+                  </div>
+                </div>
+
+                <div class="card" draggable="true">
+                  <h3>#Bora fazer uns desafios</h3>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quisquam, quos.
@@ -85,7 +102,12 @@
 
             <div class="in-progress">
               <h2 class="title">
-                Em andamento <ion-icon name="add-circle-outline"></ion-icon>
+                Em andamento
+                <ion-icon
+                  class="add-button"
+                  id="in-progress"
+                  name="add-circle-outline"
+                ></ion-icon>
               </h2>
               <div class="cards">
                 <div class="card" draggable="true">
@@ -104,9 +126,26 @@
 
             <div class="done">
               <h2 class="title">
-                Concluido <ion-icon name="add-circle-outline"></ion-icon>
+                Concluido
+                <ion-icon
+                  class="add-button"
+                  id="done"
+                  name="add-circle-outline"
+                ></ion-icon>
               </h2>
               <div class="cards">
+                <div class="card" draggable="true">
+                  <h3>#Bora fazer uns desafios</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam, quos.
+                  </p>
+                  <div class="tags">
+                    <span>Marck Codes</span>
+                    <span>desafio</span>
+                  </div>
+                </div>
+
                 <div class="card" draggable="true">
                   <h3>#Bora fazer uns desafios</h3>
                   <p>
@@ -123,6 +162,35 @@
           </section>
         </div>
       </main>
+      <!--Modal de cadastro de tarefas-->
+      <div class="modal">
+        <div class="modal-content">
+          <form id="cardForm">
+            <div class="form-group">
+              <label for="titulo">Título:</label>
+              <input name="titulo" type="text" id="titulo" required />
+            </div>
+            <div class="form-group">
+              <label for="descricao">Descrição:</label>
+
+              <textarea name="descricao" id="descricao" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="tags">Tags (separadas por vírgula):</label>
+              <input
+                type="text"
+                name="tags"
+                id="tags"
+                placeholder="tag1, tag2, ..."
+              />
+            </div>
+            <div class="form-buttons">
+              <button class="save" type="submit">Salvar</button>
+              <button type="button" class="cancel">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
     <script src="src/js/script.js"></script>
     <script

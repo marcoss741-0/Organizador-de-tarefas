@@ -13,12 +13,14 @@
 
 body {
   background: url(../assets/BG.jpg) no-repeat center center/cover;
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 #app {
   display: grid;
   grid-template-columns: max-content 1fr;
-  min-height: 100vh;
+  height: 100%;
 }
 
 nav {
@@ -156,10 +158,9 @@ section.filter .input-wrapper {
 
 section.tasks {
   margin-top: 3.2rem;
-
   display: flex;
   gap: 3.2rem;
-  height: 80%;
+  height: calc(100vh - 18rem);
 }
 
 section.tasks > * {
@@ -172,7 +173,16 @@ section.tasks > div {
   border-radius: 0.4rem;
   padding: 1.3rem;
   height: 100%;
-  overflow-y: hidden;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+section.tasks > div::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+section.tasks > div::-webkit-scrollbar-thumb {
+  background-color: #332;
 }
 
 section.tasks h2 {
@@ -244,5 +254,84 @@ h2.title ion-icon:hover {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  min-height: 93%;
+}
+
+/*
+abaixo vai o codigo do modal de cadastro de tarefas
+*/
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: rgb(45, 45, 32);
+  padding: 2rem;
+  border-radius: 0.8rem;
+  width: 90%;
+  max-width: 50rem;
+}
+
+.form-group {
+  margin-bottom: 1.6rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  color: rgb(178, 178, 126);
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: rgb(66, 66, 45);
+  color: antiquewhite;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgb(178, 178, 126);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.form-buttons button {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.form-buttons button[type="submit"] {
+  background-color: rgb(32, 81, 32);
+  color: white;
+}
+
+.form-buttons button.cancel {
+  background-color: #4e2724;
+  color: white;
 }
