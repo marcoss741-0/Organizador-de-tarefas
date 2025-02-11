@@ -343,7 +343,7 @@ h2.title ion-icon:hover {
   color: var(--color-fg-muted);
   font-size: 1.6rem;
   cursor: pointer;
-  padding: 0.8rem;
+  padding: 0.3rem;
   border-radius: 0.6rem;
   transition: background-color 0.2s;
 }
@@ -357,6 +357,7 @@ h2.title ion-icon:hover {
   flex-direction: column;
   gap: 0.8rem;
   margin-bottom: 1.6rem;
+  margin-top: 1.6rem;
 }
 
 .input-floating-box label {
