@@ -91,36 +91,33 @@
         </div>
       </main>
       <!--Modal de cadastro de tarefas-->
-      <div class="modal">
-        <div class="modal-content">
-          <form id="cardForm">
-            <div class="form-group">
-              <label for="titulo">Título:</label>
-              <input name="titulo" type="text" id="titulo" required />
-            </div>
-            <div class="form-group">
-              <label for="descricao">Descrição:</label>
 
-              <textarea name="descricao" id="descricao" required></textarea>
-            </div>
-            <div class="form-group">
-              <label for="tags">Tags (separadas por vírgula):</label>
-              <input
-                type="text"
-                name="tags"
-                id="tags"
-                placeholder="tag1, tag2, ..."
-              />
-            </div>
-            <div class="form-buttons">
-              <button class="save" type="submit">Salvar</button>
-              <button type="button" class="cancel">Cancelar</button>
-            </div>
-          </form>
-        </div>
-      </div>
+      <div id="floatingBox" class="floating-box">
+        <span id="closeFloatingBox" class="close"><ion-icon name="close-outline"></ion-icon></span>
+        <form id="cardForm">
+          <div class="input-floating-box">
+            <label for="title">Título</label>
+            <input name="title" type="text" id="title" placeholder="Digite o título da tarefa" />
+          </div>
+          <div class="input-floating-box">
+            <label for="description">Descrição</label>
+            <textarea name="description" id="description" placeholder="Digite a descrição da tarefa"></textarea>
+          </div>
+          <div class="input-floating-box">
+            <label for="Tags">Tags</label>
+            <input name="tags" type="text" id="tags" placeholder="Digite as tags da tarefa" />
+          </div>
+          <div class="button-floating-box">
+            <button type="submit">Criar tarefa</button>
+            <button type="button" class="cancel">Cancelar</button>
+          </div>
+
+        </form>
     </div>
-    <script src="src/js/script.js"></script>
+     
+
+    <script type="module" src="src/js/script.js"></script>
+    <script type="module" src="src/js/drag&drop.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
