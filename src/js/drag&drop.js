@@ -3,11 +3,11 @@ const columns = document.querySelectorAll(".cards");
 
 //funções de drag and drop
 
-export function dragStart(e) {
+function dragStart(e) {
   e.target.classList.add("is-dragging");
 }
 
-export function dragEnd(e) {
+function dragEnd(e) {
   e.target.classList.remove("is-dragging");
 }
 
@@ -79,3 +79,4 @@ document.querySelectorAll(".cards").forEach((cards) => {
 });
 
 //exportando as funções para usar de forma externa
+export { dragStart, dragEnd, dragOver, drop, dragEnter, dragLeave };
